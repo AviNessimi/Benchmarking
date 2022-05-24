@@ -1,8 +1,30 @@
-﻿using BenchmarkDotNet.Running;
+﻿
+
+
+
+using BenchmarkDotNet.Running;
 using Benchmarking;
 
-// Run benchmarking on all types in the specified assembly
-//var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Run benchmarking on all types in the specified assembly
+        //var summary = BenchmarkRunner.Run(typeof(Program).Assembly);
 
-// Run benchmarking on the specified type
-var summary = BenchmarkRunner.Run<Test1>();
+
+        //var config = DefaultConfig.Instance
+        //    .With(Job.Default.With(CoreRuntime.Core31))
+        //    .With(Job.Default.With(CoreRuntime.Core50))
+        //    .With(Job.Default.With(CoreRuntime.Core60));
+
+        //BenchmarkSwitcher
+        //    .FromAssembly(typeof(Program).Assembly)
+        //    .Run(args, config);
+
+
+        // Run benchmarking on the specified type
+        var summary = BenchmarkRunner.Run<JsonSerializerTest>();
+    }
+}
+
