@@ -1,5 +1,5 @@
 
-# Serilog Sinks Benchmak Test
+# Serilog Sinks Benchmark Test
 
 ## Win10
 ``` ini
