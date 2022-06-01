@@ -3,6 +3,7 @@ using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
+using BenchmarkDotNet.Order;
 using Serilog;
 using Serilog.Events;
 
@@ -43,7 +44,7 @@ namespace Benchmarking
         public SerilogSinksTest()
         {
 
-            var logEventLevel = LogEventLevel.Verbose;
+            var logEventLevel = LogEventLevel.Warning;
 
             _fileLogger = new LoggerConfiguration()
                 .MinimumLevel.Override("Microsoft", logEventLevel)

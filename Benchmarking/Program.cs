@@ -26,7 +26,7 @@ class Program
         // Run benchmarking on the specified type
         //var summary = BenchmarkRunner.Run<JsonSerializerTest>();
 
-        var summary = BenchmarkRunner.Run<SerilogSiknsTest>();
+        var summary = BenchmarkRunner.Run<SerilogSinksTest>();
 
         Console.ReadLine();
     }
