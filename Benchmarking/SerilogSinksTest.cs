@@ -1,11 +1,9 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Engines;
 using BenchmarkDotNet.Mathematics;
 using BenchmarkDotNet.Order;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
-using Serilog.Sinks.FastConsole;
 
 
 namespace Benchmarking
@@ -24,17 +22,16 @@ namespace Benchmarking
         private readonly ILogger _consoleLogger;
         private readonly ILogger _asyncConsoleLogger;
         private readonly ILogger _fastConsole;
-        
 
+        private static Exception ex = new("asdg asdg asdgf asdfgasg" +
+                                                    "gasdfgasgfasdfgh adsfghads fh dh" +
+                                                    "ads rfhgadfshadfsh a dsfhga fdhadf h" +
+                                                    "adfh gdfhadsfh" +
+                                                    " aderfhb a fdhadf hbadfhasdfh adf" +
+                                                    "adf hadfhadfh adfh" +
+                                                    "asd fhsdfsdfhsdhf");
 
-        private static Exception ex = new($"asdg asdg asdgf asdfgasg" +
-                                                    $"gasdfgasgfasdfgh adsfghads fh dh" +
-                                                    $"ads rfhgadfshadfsh a dsfhga fdhadf h" +
-                                                    $"adfh gdfhadsfh" +
-                                                    $" aderfhb a fdhadf hbadfhasdfh adf" +
-                                                    $"adf hadfhadfh adfh" +
-                                                    $"asd fhsdfsdfhsdhf");
-
+        private static string msg = "asdgas asgas asgas asdga sdgsad asdg";
         public SerilogSinksTest()
         {
 
@@ -59,21 +56,15 @@ namespace Benchmarking
                 .MinimumLevel.Is(logEventLevel)
                 .WriteTo.Async(writeTo => writeTo.Console())
                 .CreateLogger();
-
-            var config = new FastConsoleSinkOptions { UseJson = true };
-            _fastConsole = new LoggerConfiguration()
-                .MinimumLevel.Is(logEventLevel)
-                .WriteTo.FastConsole(config)
-                .CreateLogger();
         }
 
         static void Log(ILogger logger)
         {
-            logger.Verbose($"asdgas asgas asgas asdga sdgsad asdg");
-            logger.Debug($"asdgas asgas asgas asdga sdgsad asdg");
-            logger.Information($"asdgas asgas asgas asdga sdgsad asdg");
-            logger.Warning(ex, $"asdgas asgas asgas asdga sdgsad asdg");
-            logger.Error(ex, $"asdgas asgas asgas asdga sdgsad asdg");
+            logger.Verbose(msg);
+            logger.Debug(msg);
+            logger.Information(msg);
+            logger.Warning(ex, msg);
+            logger.Error(ex, msg);
         }
 
 
@@ -90,8 +81,6 @@ namespace Benchmarking
         [Benchmark]
         public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
 
-        [Benchmark]
-        public void FastConsoleLogger() => Log(_fastConsole);
 
         [GlobalCleanup]
         public void GlobalCleanup()
