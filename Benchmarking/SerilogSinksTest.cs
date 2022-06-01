@@ -21,15 +21,14 @@ namespace Benchmarking
         private readonly ILogger _asyncFileLogger;
         private readonly ILogger _consoleLogger;
         private readonly ILogger _asyncConsoleLogger;
-        private readonly ILogger _fastConsole;
 
         private static Exception ex = new("asdg asdg asdgf asdfgasg" +
-                                                    "gasdfgasgfasdfgh adsfghads fh dh" +
-                                                    "ads rfhgadfshadfsh a dsfhga fdhadf h" +
-                                                    "adfh gdfhadsfh" +
-                                                    " aderfhb a fdhadf hbadfhasdfh adf" +
-                                                    "adf hadfhadfh adfh" +
-                                                    "asd fhsdfsdfhsdhf");
+                                          "gasdfgasgfasdfgh adsfghads fh dh" +
+                                          "ads rfhgadfshadfsh a dsfhga fdhadf h" +
+                                          "adfh gdfhadsfh" +
+                                          " aderfhb a fdhadf hbadfhasdfh adf" +
+                                          "adf hadfhadfh adfh" +
+                                          "asd fhsdfsdfhsdhf");
 
         private static string msg = "asdgas asgas asgas asdga sdgsad asdg";
         public SerilogSinksTest()
@@ -71,16 +70,5 @@ namespace Benchmarking
         [Benchmark] public void AsyncFileLogger() => Log(_asyncFileLogger);
         [Benchmark] public void ConsoleLogger() => Log(_consoleLogger);
         [Benchmark] public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
-
-
-        //[GlobalCleanup]
-        //public void GlobalCleanup()
-        //{
-        //    ((Logger)_fileLogger).Dispose();
-        //    ((Logger)_asyncFileLogger).Dispose();
-        //    ((Logger)_consoleLogger).Dispose();
-        //    ((Logger)_asyncConsoleLogger).Dispose();
-        //    ((Logger)_fastConsole).Dispose();
-        //}
     }
 }
