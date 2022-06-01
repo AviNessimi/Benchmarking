@@ -5,7 +5,9 @@ using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Order;
 using Serilog;
+using Serilog.Core;
 using Serilog.Events;
+using Serilog.Sinks.FastConsole;
 
 
 namespace Benchmarking
@@ -31,6 +33,8 @@ namespace Benchmarking
         private readonly ILogger _consoleLogger;
         private readonly ILogger _asyncConsoleLogger;
         private readonly ILogger _asyncFileLogger;
+        private readonly ILogger _fastConsole;
+        
 
 
         private static Exception ex = new($"asdg asdg asdgf asdfgasg" +
@@ -47,31 +51,38 @@ namespace Benchmarking
             var logEventLevel = LogEventLevel.Warning;
 
             _fileLogger = new LoggerConfiguration()
-                .MinimumLevel.Verbose()
+                .MinimumLevel.Warning()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .WriteTo.File("logs/fileLogger.log")
                 .CreateLogger();
 
             _consoleLogger = new LoggerConfiguration()
+                .MinimumLevel.Warning()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .WriteTo.Console()
                 .CreateLogger();
 
             _asyncConsoleLogger = new LoggerConfiguration()
+                .MinimumLevel.Warning()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
-                .Enrich.FromLogContext()
                 .WriteTo.Async(writeTo
                     => writeTo.Console())
                 .CreateLogger();
 
             _asyncFileLogger = new LoggerConfiguration()
+                .MinimumLevel.Warning()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
-                .Enrich.FromLogContext()
                 .WriteTo.Async(a
                     => a.File("logs/asyncFileLogger.log"))
                 .CreateLogger();
 
-            //Log.Logger = log;
+
+            var config = new FastConsoleSinkOptions { UseJson = true };
+            _fastConsole = new LoggerConfiguration()
+                .MinimumLevel.Warning()
+                .MinimumLevel.Override("Microsoft", logEventLevel)
+                .WriteTo.FastConsole(config)
+                .CreateLogger();
         }
 
         static void Log(ILogger logger)
@@ -88,18 +99,26 @@ namespace Benchmarking
         public void FileLogger() => Log(_fileLogger);
 
         [Benchmark]
+        public void AsyncFileLogger() => Log(_asyncFileLogger);
+
+
+        [Benchmark]
         public void ConsoleLogger() => Log(_consoleLogger);
 
         [Benchmark]
         public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
 
         [Benchmark]
-        public void AsyncFileLogger() => Log(_asyncFileLogger);
+        public void FastConsoleLogger() => Log(_fastConsole);
 
-        //[GlobalCleanup]
-        //public void GlobalCleanup()
-        //{
-        //    _consoleLogger.CloseAndFlush();
-        //}
+        [GlobalCleanup]
+        public void GlobalCleanup()
+        {
+            ((Logger)_fileLogger).Dispose();
+            ((Logger)_asyncFileLogger).Dispose();
+            ((Logger)_consoleLogger).Dispose();
+            ((Logger)_asyncConsoleLogger).Dispose();
+            ((Logger)_fastConsole).Dispose();
+        }
     }
 }
