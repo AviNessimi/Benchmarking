@@ -12,12 +12,13 @@ BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
 
 
 ```
-|             Method |         Mean |       Error |      StdDev |  Gen 0 |  Gen 1 | Allocated |
-|------------------- |-------------:|------------:|------------:|-------:|-------:|----------:|
-|         FileLogger |     880.4 ns |    58.31 ns |   162.53 ns | 0.0687 |      - |     432 B |
-|      ConsoleLogger | 453,558.1 ns | 5,739.92 ns | 4,793.10 ns |      - |      - |   4,786 B |
-| AsyncConsoleLogger |     840.5 ns |    16.19 ns |    16.62 ns | 0.0811 | 0.0076 |     512 B |
-|    AsyncFileLogger |   1,467.5 ns |    26.67 ns |    30.72 ns | 0.0687 |      - |     432 B |
+|             Method |         Mean |       Error |      StdDev |       Median | Rank |
+|------------------- |-------------:|------------:|------------:|-------------:|-----:|
+|         FileLogger |    21.808 μs |   0.4339 μs |   0.7249 μs |    21.913 μs |  III |
+|      ConsoleLogger | 1,979.253 μs | 152.6930 μs | 435.6418 μs | 1,944.404 μs |   IV |
+| AsyncConsoleLogger |     1.623 μs |   0.0745 μs |   0.2197 μs |     1.716 μs |    I |
+|    AsyncFileLogger |     2.266 μs |   0.1057 μs |   0.3117 μs |     2.360 μs |   II |
+
 
 
 
