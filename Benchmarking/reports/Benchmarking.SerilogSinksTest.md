@@ -19,6 +19,12 @@ BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
 | AsyncConsoleLogger |     840.5 ns |    16.19 ns |    16.62 ns | 0.0811 | 0.0076 |     512 B |
 |    AsyncFileLogger |   1,467.5 ns |    26.67 ns |    30.72 ns | 0.0687 |      - |     432 B |
 
+|             Method |           Mean |        Error |        StdDev |  Gen 0 |  Gen 1 | Allocated |
+|------------------- |---------------:|-------------:|--------------:|-------:|-------:|----------:|
+|         FileLogger |       736.1 ns |     15.83 ns |      40.57 ns | 0.0687 |      - |     432 B |
+|      ConsoleLogger | 1,235,428.0 ns | 43,660.74 ns | 128,049.41 ns |      - |      - |   4,789 B |
+| AsyncConsoleLogger |     1,483.5 ns |     14.24 ns |      13.32 ns | 0.0801 | 0.0038 |     508 B |
+|    AsyncFileLogger |     2,221.8 ns |     39.76 ns |      35.25 ns | 0.0687 |      - |     432 B |
 
 |             Method |         Mean |       Error |      StdDev |       Median | Rank |
 |------------------- |-------------:|------------:|------------:|-------------:|-----:|
@@ -26,6 +32,7 @@ BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19044.1706 (21H2)
 |      ConsoleLogger | 1,979.253 us | 152.6930 us | 435.6418 us | 1,944.404 us |   IV |
 | AsyncConsoleLogger |     1.623 us |   0.0745 us |   0.2197 us |     1.716 us |    I |
 |    AsyncFileLogger |     2.266 us |   0.1057 us |   0.3117 us |     2.360 us |   II |
+
 
 
 
