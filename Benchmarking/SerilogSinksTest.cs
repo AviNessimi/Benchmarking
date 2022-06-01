@@ -1,21 +1,40 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Columns;
+using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Exporters;
+using BenchmarkDotNet.Exporters.Csv;
+using BenchmarkDotNet.Jobs;
+using BenchmarkDotNet.Order;
 using Serilog;
 using Serilog.Events;
 
 
 namespace Benchmarking
 {
+    public class TestConfig : ManualConfig
+    {
+        public TestConfig()
+        {
+            Add(RankColumn.Roman);
+            Add(CsvMeasurementsExporter.Default);
+            Add(RPlotExporter.Default);
+            Add(PlainExporter.Default);
+            Add(HtmlExporter.Default);
+        }
+    }
+
     [MemoryDiagnoser]
-    //[SimpleJob(RuntimeMoniker.CoreRt60)]
+    [KeepBenchmarkFiles]
+    //[Config(typeof(TestConfig))]
     public class SerilogSiknsTest
     {
         private readonly ILogger _fileLogger;
         private readonly ILogger _consoleLogger;
         private readonly ILogger _asyncConsoleLogger;
         private readonly ILogger _asyncFileLogger;
-        
 
-        private static Exception ex = new ($"asdg asdg asdgf asdfgasg" +
+
+        private static Exception ex = new($"asdg asdg asdgf asdfgasg" +
                                                     $"gasdfgasgfasdfgh adsfghads fh dh" +
                                                     $"ads rfhgadfshadfsh a dsfhga fdhadf h" +
                                                     $"adfh gdfhadsfh" +
@@ -41,13 +60,15 @@ namespace Benchmarking
             _asyncConsoleLogger = new LoggerConfiguration()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .Enrich.FromLogContext()
-                .WriteTo.Async(writeTo => writeTo.Console())
+                .WriteTo.Async(writeTo
+                    => writeTo.Console())
                 .CreateLogger();
 
             _asyncFileLogger = new LoggerConfiguration()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .Enrich.FromLogContext()
-                .WriteTo.Async(a => a.File("logs/asyncFileLogger.log"))
+                .WriteTo.Async(a 
+                    => a.File("logs/asyncFileLogger.log"))
                 .CreateLogger();
 
             //Log.Logger = log;
