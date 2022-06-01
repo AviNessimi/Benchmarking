@@ -13,7 +13,7 @@ namespace Benchmarking
     //[Config(typeof(TestConfig))]
     //[KeepBenchmarkFiles]
     //[SimpleJob(launchCount: 3, warmupCount: 3, targetCount: 10)]
-    [SimpleJob(RunStrategy.ColdStart)]
+    //[SimpleJob(RunStrategy.ColdStart)]
     [MemoryDiagnoser]
     [Orderer(SummaryOrderPolicy.FastestToSlowest)]
     [RankColumn(NumeralSystem.Roman)]
