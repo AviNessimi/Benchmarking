@@ -27,6 +27,8 @@ class Program
         //var summary = BenchmarkRunner.Run<JsonSerializerTest>();
 
         var summary = BenchmarkRunner.Run<SerilogSiknsTest>();
+
+        Console.ReadLine();
     }
 }
 
