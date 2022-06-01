@@ -47,6 +47,7 @@ namespace Benchmarking
             var logEventLevel = LogEventLevel.Warning;
 
             _fileLogger = new LoggerConfiguration()
+                .MinimumLevel.Verbose()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .WriteTo.File("logs/fileLogger.log")
                 .CreateLogger();
