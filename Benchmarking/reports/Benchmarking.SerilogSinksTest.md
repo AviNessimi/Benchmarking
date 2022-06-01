@@ -74,5 +74,5 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 | AsyncConsoleLogger |   2,534.7 ns |    125.97 ns |    369.46 ns |   2,402.7 ns | 0.0801 | 0.0114 | 0.0038 |     526 B |
 |    AsyncFileLogger |   1,558.6 ns |    162.90 ns |    472.61 ns |   1,626.8 ns | 0.0687 |      - |      - |     432 B |
 
-
+![image](https://user-images.githubusercontent.com/104366166/171481466-eec023ef-e723-45ad-a4fe-40d2bb02a8a8.png)
 
