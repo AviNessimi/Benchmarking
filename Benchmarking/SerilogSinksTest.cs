@@ -67,19 +67,10 @@ namespace Benchmarking
             logger.Error(ex, msg);
         }
 
-
-        //[Benchmark]
-        //public void FileLogger() => Log(_fileLogger);
-
-        //[Benchmark]
-        //public void AsyncFileLogger() => Log(_asyncFileLogger);
-
-
-        [Benchmark(Baseline = true)]
-        public void ConsoleLogger() => Log(_consoleLogger);
-
-        [Benchmark]
-        public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
+        [Benchmark] public void FileLogger() => Log(_fileLogger);
+        [Benchmark] public void AsyncFileLogger() => Log(_asyncFileLogger);
+        [Benchmark] public void ConsoleLogger() => Log(_consoleLogger);
+        [Benchmark] public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
 
 
         //[GlobalCleanup]
