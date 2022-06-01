@@ -68,11 +68,11 @@ namespace Benchmarking
         }
 
 
-        [Benchmark]
-        public void FileLogger() => Log(_fileLogger);
+        //[Benchmark]
+        //public void FileLogger() => Log(_fileLogger);
 
-        [Benchmark]
-        public void AsyncFileLogger() => Log(_asyncFileLogger);
+        //[Benchmark]
+        //public void AsyncFileLogger() => Log(_asyncFileLogger);
 
 
         [Benchmark(Baseline = true)]
@@ -82,14 +82,14 @@ namespace Benchmarking
         public void AsyncConsoleLogger() => Log(_asyncConsoleLogger);
 
 
-        [GlobalCleanup]
-        public void GlobalCleanup()
-        {
-            ((Logger)_fileLogger).Dispose();
-            ((Logger)_asyncFileLogger).Dispose();
-            ((Logger)_consoleLogger).Dispose();
-            ((Logger)_asyncConsoleLogger).Dispose();
-            ((Logger)_fastConsole).Dispose();
-        }
+        //[GlobalCleanup]
+        //public void GlobalCleanup()
+        //{
+        //    ((Logger)_fileLogger).Dispose();
+        //    ((Logger)_asyncFileLogger).Dispose();
+        //    ((Logger)_consoleLogger).Dispose();
+        //    ((Logger)_asyncConsoleLogger).Dispose();
+        //    ((Logger)_fastConsole).Dispose();
+        //}
     }
 }
