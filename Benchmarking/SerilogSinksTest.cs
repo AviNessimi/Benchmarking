@@ -3,8 +3,6 @@ using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Exporters;
 using BenchmarkDotNet.Exporters.Csv;
-using BenchmarkDotNet.Jobs;
-using BenchmarkDotNet.Order;
 using Serilog;
 using Serilog.Events;
 
@@ -26,7 +24,7 @@ namespace Benchmarking
     [MemoryDiagnoser]
     [KeepBenchmarkFiles]
     //[Config(typeof(TestConfig))]
-    public class SerilogSiknsTest
+    public class SerilogSinksTest
     {
         private readonly ILogger _fileLogger;
         private readonly ILogger _consoleLogger;
@@ -42,7 +40,7 @@ namespace Benchmarking
                                                     $"adf hadfhadfh adfh" +
                                                     $"asd fhsdfsdfhsdhf");
 
-        public SerilogSiknsTest()
+        public SerilogSinksTest()
         {
 
             var logEventLevel = LogEventLevel.Verbose;
@@ -67,7 +65,7 @@ namespace Benchmarking
             _asyncFileLogger = new LoggerConfiguration()
                 .MinimumLevel.Override("Microsoft", logEventLevel)
                 .Enrich.FromLogContext()
-                .WriteTo.Async(a 
+                .WriteTo.Async(a
                     => a.File("logs/asyncFileLogger.log"))
                 .CreateLogger();
 
