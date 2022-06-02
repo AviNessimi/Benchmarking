@@ -11,6 +11,7 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
   DefaultJob : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
 
 ```
+### LogEventLevel.Warning
 
 |             Method |        Mean |       Error |      StdDev |      Median | Rank |  Gen 0 |  Gen 1 |  Gen 2 | Allocated |
 |------------------- |------------:|------------:|------------:|------------:|-----:|-------:|-------:|-------:|----------:|
