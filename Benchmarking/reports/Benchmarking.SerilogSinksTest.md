@@ -24,11 +24,11 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ## JMeter
 JMeter Graphs Results displays line charts for common metrics as well as number figures:
 
-No of Samples: the number of samples being processed,
-Latest Sample: Latest Elapsed Time in milliseconds,
-Average Elapsed Time: in milliseconds,
-Standard Deviation: in milliseconds,
-and Throughput: in KB/sec.
+- No of Samples: the number of samples being processed,
+- Latest Sample: Latest Elapsed Time in milliseconds,
+- Average Elapsed Time: in milliseconds,
+- Standard Deviation: in milliseconds,
+- Throughput: in KB/sec.
 
 ## 500 Users 100 request every second
 
