@@ -27,6 +27,7 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 #### LogEventLevel.Verbose
 
 ### ConsoleLogger
+Execution Time ~= 08:30 min
 ![image](https://user-images.githubusercontent.com/104366166/172483294-b75d3094-dc4b-409d-b96e-36525701bdcb.png)
 
 ### AsyncConsoleLogger
