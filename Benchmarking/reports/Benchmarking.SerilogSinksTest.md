@@ -21,3 +21,16 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 |      ConsoleLogger | 23,351.7 ns | 1,216.14 ns | 3,369.92 ns | 24,039.0 ns |   IV | 0.5798 |      - |      - |   3,728 
 
 
+## JMeter
+
+## 500 Users 100 request every second
+
+### ConsoleLogger
+![image](https://user-images.githubusercontent.com/104366166/172413335-5a4f080a-8c6f-4b51-a7d3-59ecdd4c48a8.png)
+
+### AsyncConsoleLogger
+![image](https://user-images.githubusercontent.com/104366166/172412835-fa2b9063-011b-4185-9b57-dd7df08cca47.png)
+
+
+
+
