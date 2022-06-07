@@ -26,7 +26,8 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ## 500 Users 100 request every second
 
 ### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172451983-5dbe799f-4a43-494a-a75f-c32eed2a04b0.png)
+![image](https://user-images.githubusercontent.com/104366166/172453797-ac8c02ed-f24e-47db-b9b2-0b4e02f53c56.png)
+
 
 ### AsyncConsoleLogger
 ![image](https://user-images.githubusercontent.com/104366166/172452051-ef66704d-0946-4cec-af83-1786de5b465a.png)
