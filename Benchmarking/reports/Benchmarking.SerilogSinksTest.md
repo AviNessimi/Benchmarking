@@ -33,9 +33,19 @@ JMeter Graphs Results displays line charts for common metrics as well as number 
 ## 500 Users 100 request every second
 
 ### ConsoleLogger
+No of Samples: 50000
+Latest Sample: 7 milliseconds,
+Average Elapsed Time: 369 milliseconds,
+Standard Deviation: 665 milliseconds,
+Throughput: 76,816.715 KB/sec.
 ![image](https://user-images.githubusercontent.com/104366166/172413335-5a4f080a-8c6f-4b51-a7d3-59ecdd4c48a8.png)
 
 ### AsyncConsoleLogger
+No of Samples: 50000
+Latest Sample: 0 milliseconds,
+Average Elapsed Time: 17 milliseconds,
+Standard Deviation: 259 milliseconds,
+Throughput: 540,345.821 KB/sec.
 ![image](https://user-images.githubusercontent.com/104366166/172412835-fa2b9063-011b-4185-9b57-dd7df08cca47.png)
 
 
