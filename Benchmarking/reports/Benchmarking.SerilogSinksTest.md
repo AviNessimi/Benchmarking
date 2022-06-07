@@ -22,7 +22,7 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 
 ## JMeter
-![image](https://user-images.githubusercontent.com/104366166/172455228-8ab18f72-0e08-44d9-ba52-4295ca53ed4b.png)
+![image](https://user-images.githubusercontent.com/104366166/172484000-9e138cb6-3210-4cf0-8a9c-aed6e4ab8826.png)
 
 #### LogEventLevel.Verbose
 
@@ -31,7 +31,8 @@ Execution Time ~= 08:30 min
 ![image](https://user-images.githubusercontent.com/104366166/172483294-b75d3094-dc4b-409d-b96e-36525701bdcb.png)
 
 ### AsyncConsoleLogger
-
+Execution Time ~= 01:30 min
+![image](https://user-images.githubusercontent.com/104366166/172483928-0c117e51-6b50-4689-8243-b888d3cc4020.png)
 
 
 
