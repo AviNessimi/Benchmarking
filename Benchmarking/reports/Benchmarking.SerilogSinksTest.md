@@ -11,7 +11,7 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
   DefaultJob : .NET 6.0.5 (6.0.522.21309), X64 RyuJIT
 
 ```
-### LogEventLevel.Warning
+#### LogEventLevel.Warning
 
 |             Method |        Mean |       Error |      StdDev |      Median | Rank |  Gen 0 |  Gen 1 |  Gen 2 | Allocated |
 |------------------- |------------:|------------:|------------:|------------:|-----:|-------:|-------:|-------:|----------:|
@@ -22,8 +22,9 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 
 ## JMeter
-
 ![image](https://user-images.githubusercontent.com/104366166/172455228-8ab18f72-0e08-44d9-ba52-4295ca53ed4b.png)
+
+#### LogEventLevel.Warning
 
 ### ConsoleLogger
 ![image](https://user-images.githubusercontent.com/104366166/172464632-dd49e91b-fc1d-4c6d-9ad8-ce00d262b6ee.png)
@@ -32,13 +33,14 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ![image](https://user-images.githubusercontent.com/104366166/172464758-dd43d8a6-3663-41b0-87d1-2d090d4248b8.png)
 
 -----------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/104366166/172477261-2c270b68-cae3-4614-8074-6d9539f060c0.png)
+
+#### LogEventLevel.Information
 
 ### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172477184-e3d18f04-03f3-4802-8f8a-01f2775a0a2a.png)
+![image](https://user-images.githubusercontent.com/104366166/172477935-12da2397-4831-428a-99f7-76ac03e88d28.png)
 
 ### AsyncConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172477221-002d86d6-57cd-465f-b5ec-6eae3e946889.png)
+![image](https://user-images.githubusercontent.com/104366166/172477864-e2fe6216-98f9-41a1-8b78-94cc1c14a0fd.png)
 
 
 
