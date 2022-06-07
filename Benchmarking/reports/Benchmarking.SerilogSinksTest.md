@@ -24,23 +24,14 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ## JMeter
 ![image](https://user-images.githubusercontent.com/104366166/172455228-8ab18f72-0e08-44d9-ba52-4295ca53ed4b.png)
 
-#### LogEventLevel.Warning
+#### LogEventLevel.Verbose
 
 ### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172464632-dd49e91b-fc1d-4c6d-9ad8-ce00d262b6ee.png)
+![image](https://user-images.githubusercontent.com/104366166/172483294-b75d3094-dc4b-409d-b96e-36525701bdcb.png)
 
 ### AsyncConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172464758-dd43d8a6-3663-41b0-87d1-2d090d4248b8.png)
 
------------------------------------------------------------------------------------------------------------------
 
-#### LogEventLevel.Information
-
-### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172477935-12da2397-4831-428a-99f7-76ac03e88d28.png)
-
-### AsyncConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172477864-e2fe6216-98f9-41a1-8b78-94cc1c14a0fd.png)
 
 
 
