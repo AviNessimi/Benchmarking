@@ -30,7 +30,8 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 
 ### AsyncConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172452051-ef66704d-0946-4cec-af83-1786de5b465a.png)
+![image](https://user-images.githubusercontent.com/104366166/172458722-b00fea4a-ec50-42b2-a736-5e4ff7abcefb.png)
+
 
 
 
