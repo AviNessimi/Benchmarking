@@ -23,10 +23,10 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 ## JMeter
 
-## 500 Users 100 request every second
+![image](https://user-images.githubusercontent.com/104366166/172455228-8ab18f72-0e08-44d9-ba52-4295ca53ed4b.png)
 
 ### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172453797-ac8c02ed-f24e-47db-b9b2-0b4e02f53c56.png)
+![image](https://user-images.githubusercontent.com/104366166/172455287-3ab0e82a-af10-47f9-ad44-963c2652a281.png)
 
 
 ### AsyncConsoleLogger
