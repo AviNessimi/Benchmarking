@@ -22,17 +22,11 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 
 ## JMeter
-JMeter Graphs Results displays line charts for common metrics as well as number figures:
-
-- No of Samples: the number of samples being processed,
-- Latest Sample: Latest Elapsed Time in milliseconds,
-- Average Elapsed Time: in milliseconds,
-- Standard Deviation: in milliseconds,
-- Throughput: in KB/sec.
 
 ## 500 Users 100 request every second
 
 ### ConsoleLogger
+* figures:
 - No of Samples: 50000
 - Latest Sample: 7 milliseconds,
 - Average Elapsed Time: 369 milliseconds,
@@ -41,6 +35,7 @@ JMeter Graphs Results displays line charts for common metrics as well as number 
 ![image](https://user-images.githubusercontent.com/104366166/172413335-5a4f080a-8c6f-4b51-a7d3-59ecdd4c48a8.png)
 
 ### AsyncConsoleLogger
+* figures
 - No of Samples: 50000
 - Latest Sample: 0 milliseconds,
 - Average Elapsed Time: 17 milliseconds,
