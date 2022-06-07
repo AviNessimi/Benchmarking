@@ -32,13 +32,13 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ![image](https://user-images.githubusercontent.com/104366166/172464758-dd43d8a6-3663-41b0-87d1-2d090d4248b8.png)
 
 -----------------------------------------------------------------------------------------------------------------
-![image](https://user-images.githubusercontent.com/104366166/172473315-ab68b738-e60d-45b8-8653-2dd238f12d68.png)
+![image](https://user-images.githubusercontent.com/104366166/172477261-2c270b68-cae3-4614-8074-6d9539f060c0.png)
 
 ### ConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172473252-84ed10a4-fad2-43be-8533-f665c29b3202.png)
+![image](https://user-images.githubusercontent.com/104366166/172477184-e3d18f04-03f3-4802-8f8a-01f2775a0a2a.png)
 
 ### AsyncConsoleLogger
-![image](https://user-images.githubusercontent.com/104366166/172473140-673820f5-99b7-4964-858e-e779c92959f8.png)
+![image](https://user-images.githubusercontent.com/104366166/172477221-002d86d6-57cd-465f-b5ec-6eae3e946889.png)
 
 
 
