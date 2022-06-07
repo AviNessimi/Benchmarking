@@ -26,22 +26,10 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ## 500 Users 100 request every second
 
 ### ConsoleLogger
-* figures:
-- No of Samples: 50000
-- Latest Sample: 7 milliseconds,
-- Average Elapsed Time: 369 milliseconds,
-- Standard Deviation: 665 milliseconds,
-- Throughput: 76,816.715 KB/sec.
-![image](https://user-images.githubusercontent.com/104366166/172413335-5a4f080a-8c6f-4b51-a7d3-59ecdd4c48a8.png)
+![image](https://user-images.githubusercontent.com/104366166/172451983-5dbe799f-4a43-494a-a75f-c32eed2a04b0.png)
 
 ### AsyncConsoleLogger
-* figures
-- No of Samples: 50000
-- Latest Sample: 0 milliseconds,
-- Average Elapsed Time: 17 milliseconds,
-- Standard Deviation: 259 milliseconds,
-- Throughput: 540,345.821 KB/sec.
-![image](https://user-images.githubusercontent.com/104366166/172412835-fa2b9063-011b-4185-9b57-dd7df08cca47.png)
+![image](https://user-images.githubusercontent.com/104366166/172452051-ef66704d-0946-4cec-af83-1786de5b465a.png)
 
 
 
