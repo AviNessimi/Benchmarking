@@ -22,6 +22,15 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 
 ## JMeter
+- Latest Sample: This is the sample time in millisecond.It is the response time for the last request
+- The Throughput: is the number of requests per unit of time (seconds, minutes, hours) that are sent to server during the test.
+- Average: This is the Average (Arithmetic mean) Response time of total samples.
+- Median: This the midpoint of a frequency distribution.
+- 
+***An important thing to understand is that the mean value can be very misleading as it does not show you how close (or far) your values are from the average.For this purpose, we need the Deviation value since Average value can be the Same for different response time of the samples!!
+
+- Deviation: The standard deviation (σ) measures the mean distance of the values to their average (μ).It gives you a good idea of the dispersion or variability of the measures to their mean value.
+
 ![image](https://user-images.githubusercontent.com/104366166/172484000-9e138cb6-3210-4cf0-8a9c-aed6e4ab8826.png)
 
 #### LogEventLevel.Verbose
