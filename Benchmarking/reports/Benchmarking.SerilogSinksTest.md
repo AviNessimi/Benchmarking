@@ -33,7 +33,7 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 
 ![image](https://user-images.githubusercontent.com/104366166/172484000-9e138cb6-3210-4cf0-8a9c-aed6e4ab8826.png)
 
-#### LogEventLevel.Verbose
+#### Service 1 | LogEventLevel.Verbose
 
 ### ConsoleLogger
 **Execution Time ~= 08:30 min**
@@ -42,6 +42,15 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 ### AsyncConsoleLogger
 **Execution Time ~= 01:30 min**
 ![image](https://user-images.githubusercontent.com/104366166/172483928-0c117e51-6b50-4689-8243-b888d3cc4020.png)
+
+
+#### Service 2 | LogEventLevel.Information 
+
+### ConsoleLogger
+<img width="1200" alt="AsyncConsole" src="https://user-images.githubusercontent.com/104366166/172503675-3de4e538-3bf9-42a8-b819-e8ce73770721.PNG">
+
+### AsyncConsoleLogger
+<img width="1200" alt="Console" src="https://user-images.githubusercontent.com/104366166/172503668-8e8566ac-1910-4d76-ae13-5568f32e7843.PNG">
 
 
 
