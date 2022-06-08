@@ -47,11 +47,10 @@ BenchmarkDotNet=v0.13.1, OS=debian 11 (container)
 #### Service 2 | LogEventLevel.Information 
 
 ### ConsoleLogger
-<img width="707" alt="Console" src="https://user-images.githubusercontent.com/104366166/172503668-8e8566ac-1910-4d76-ae13-5568f32e7843.PNG">
-
+<img width="711" alt="AsyncConsole" src="https://user-images.githubusercontent.com/104366166/172503675-3de4e538-3bf9-42a8-b819-e8ce73770721.PNG">
 
 ### AsyncConsoleLogger
-<img width="711" alt="AsyncConsole" src="https://user-images.githubusercontent.com/104366166/172503675-3de4e538-3bf9-42a8-b819-e8ce73770721.PNG">
+<img width="707" alt="Console" src="https://user-images.githubusercontent.com/104366166/172503668-8e8566ac-1910-4d76-ae13-5568f32e7843.PNG">
 
 
 
